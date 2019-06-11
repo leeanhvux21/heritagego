@@ -2,7 +2,7 @@ Héritage GO
 
 *************************************
 HOW TO USE:
-    RIGHT-CLICK on index.html then select open with <your favorite browser>
+    RIGHT-CLICK on index.html then select OPEN WITH <your favorite browser>
     Highly-recommended browser: Lastest version of Google Chrome
 
 *************************************
