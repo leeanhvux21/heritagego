@@ -1,0 +1,89 @@
+* {
+margin: 0;
+}
+body {
+  color: #262626;
+  background-color: #fafafa;
+}
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  color: rgb(38, 38, 38);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  display: flex;
+}
+.feed__left img{
+  width: 100;
+  height: auto;
+  max-height: 80px;
+}
+.centered{
+  font-family: Arial;
+  text-align: center;
+}
+.area_name__primary{
+  font-size: 18px;
+}
+.area_name__secondary{
+  font-size: 14px;
+}
+.fa_compass_icon{
+  width: 24px;
+  height: 24px;
+}
+.feed{
+  flex: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+.feed__right{
+  display: flex;
+  align-self: center;
+  align-self: right;
+  margin: 6px 0 6px 0;
+}
+.login{
+  align-self: center;
+}
+.login_button{
+  font-size: 14px;
+  border-radius: 3px;
+  border-color: rgb(230, 230, 230);
+  margin: 24px;
+  float: right;
+  min-width: 60px;
+}
+.feed__left img{
+  transition: all 100ms ease-out;
+}
+.feed__left img:hover{
+  transform: scale(1.1);
+  transform-origin: center;
+  transition-duration: 100ms;
+}
+
+.fa_compass_icon {
+		animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+}
+
+@media only screen and (max-width: 600px){
+  .body{
+    width: 100%;
+  }
+  .feed{
+    flex: auto;
+    margin-left: 24px;
+  }

@@ -1,0 +1,66 @@
+* {
+margin: 0;
+}
+body {
+  color: #262626;
+  background-color: #fafafa;
+}
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  color: rgb(38, 38, 38);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  display: flex;
+}
+.feed__left img{
+  width: 100;
+  height: auto;
+  max-height: 80px;
+}
+.centered{
+  font-family: Arial;
+  text-align: center;
+}
+.area_name__primary{
+  font-size: 18px;
+}
+.area_name__secondary{
+  font-size: 14px;
+}
+.fa_compass_icon{
+  width: 24px;
+  height: 24px;
+}
+.space{
+  flex: 0 0 calc((100vw - 600px) / 2);
+}
+
+.feed{
+  flex: 0 0 600px;
+  display: flex;
+}
+.feed__right{
+  display: flex;
+  align-self: center;
+  align-self: right;
+  margin: 6px 0 6px 0;
+}
+.login{
+  flex: 0 0 calc((100vw - 600px) / 2);
+  align-self: center;
+}
+.login_button{
+  font-size: 14px;
+  border-radius: 3px;
+  border-color: rgb(230, 230, 230);
+  margin: 24px 24px 24px 0px;
+}
+.feed__left img{
+  transition: all 100ms ease-out;
+}
+.feed__left img:hover{
+  transform: scale(1.1);
+  transform-origin: center;
+  transition-duration: 100ms;
+}
