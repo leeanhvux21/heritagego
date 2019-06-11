@@ -18,15 +18,16 @@ body {
   height: auto;
   max-height: 80px;
 }
-.centered{
-  font-family: Arial;
+.area_name{
   text-align: center;
 }
 .area_name__primary{
   font-size: 18px;
+  font-weight: bold;
 }
 .area_name__secondary{
   font-size: 14px;
+  font-weight: bold;
 }
 .fa_compass_icon{
   width: 24px;
@@ -48,12 +49,12 @@ body {
 }
 .login{
   align-self: center;
+  margin: 24px;
 }
 .login_button{
   font-size: 14px;
   border-radius: 3px;
   border-color: rgb(230, 230, 230);
-  margin: 24px;
   float: right;
   min-width: 60px;
 }
@@ -79,6 +80,41 @@ body {
 		}
 }
 
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control-placeholder {
+  position: absolute;
+  top: 0;
+  padding: 7px 0 0 13px;
+  transition: all 200ms;
+  opacity: 0.5;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+  color: #1a8fce;
+  font-weight: bold;
+}
+
+.modal_body__login_button{
+  color: #fff;
+  background-color: #1a8fce;
+  width: 100%;
+}
+
+.modal-title{
+  font-weight: bold;
+}
+.form-control{
+
+}
+
 @media only screen and (max-width: 600px){
   .body{
     width: 100%;
@@ -87,3 +123,24 @@ body {
     flex: auto;
     margin-left: 24px;
   }
+}
+
+#email, .password_section{
+  border: none;
+  border-bottom: 1px solid #1a8fce;
+  border-radius: 0;
+}
+
+.lock_password{
+  border: 0;
+  background-color: transparent;
+}
+
+#password{
+  flex-grow:2;
+  border: none;
+}
+
+.password_section{
+  display: flex;
+}

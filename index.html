@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./css/main.css" />
+	<!-- <link
+	rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/> -->
 	<title>Héritage GO</title>
 	<meta charset="utf-8">
 	<meta name="description" content="Héritage GO is the community for heritage lovers.">
@@ -16,10 +18,15 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 
-
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+				 integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/main.css" />
 
 </head>
 <body>
+
 	<div class="header">
 		<div class="space">
 		</div>
@@ -33,16 +40,76 @@
 					<h2 class="area_name__secondary">Vietnam</h2>
 				</div>
 				<img src="fa-compass.svg" alt="Compass icon" class="fa_compass_icon">
+				<!-- <i class="far fa-compass"></i> -->
 			</div>
 		</div>
 
 		<div class="login">
 
-			<button type="button" name="Login" class="login_button">Log In</button>
+			<button type="button" data-toggle="modal" data-target="#myModal" name="Login">Log In</button>
 		</div>
 	</div>
 
-	<script src="./js/jquery-3.4.1.min.js"></script>
+
+	<!-- The Modal -->
+	<div class="modal" id="myModal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <!-- Modal Header -->
+	      <div class="modal-header">
+	        <h4 class="modal-title">Log in</h4>
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      </div>
+
+	      <!-- Modal body -->
+	      <div class="modal-body">
+			      <div class="form-group">
+			        <input type="text" id="email" class="form-control" required>
+			        <label class="form-control-placeholder" for="email">Email address</label>
+			      </div>
+			      <form class="form-group password_section">
+			        <input type="password" id="password" class="form-control" required >
+							<label class="form-control-placeholder" for="password">Password</label>
+							<button type="button" onclick="myFunction()" class="lock_password" name="lock_password"><i class="fas fa-lock" id="lock_icon"></i></button>
+			      </form>
+						<button type="button" class="btn modal_body__login_button">Log In</button>
+
+	      </div>
+
+	      <!-- Modal footer -->
+
+	    </div>
+	  </div>
+	</div>
+
+
+	<script>
+	function myFunction() {
+		var lock= document.getElementById("lock_icon");
+	  var button = document.getElementById("password");
+	  if (button.type === "password") {
+	    button.type = "text";
+	  } else {
+	    button.type = "password";
+	  }
+		if (lock.className === "fas fa-lock"){
+			lock.className = "fas fa-lock-open";
+		} else {
+			lock.className = "fas fa-lock";
+		}
+
+	}
+	</script>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="./js/heritagego-service.1.0.0.js"></script>
 </body>
 </html>
