@@ -5,13 +5,14 @@ body {
   color: #262626;
   background-color: #fafafa;
 }
-.header {
+header {
   height: 80px;
   width: 100%;
   background-color: white;
   color: rgb(38, 38, 38);
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
   display: flex;
+  position: fixed;
 }
 .feed__left img{
   width: 100;
@@ -143,4 +144,74 @@ body {
 
 .password_section{
   display: flex;
+}
+
+.photo_posts{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  flex: auto;
+  border: 1px solid rgb(230, 230, 230);
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.post_header{
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.user_avatar img{
+  max-width: 75px;
+  max-height: 75px;
+  padding: 10px;
+}
+
+.photo_title p, .fa-clock{
+  font-weight: 600;
+}
+
+.photo_title div i{
+  margin-right: 20px;
+}
+
+.select_language_button{
+  max-height: 30px;
+}
+.select_language_button, .submit_comment{
+  background: none;
+  border: none;
+}
+.photo img{
+  max-width: 600px;
+  height: auto;
+}
+
+.interactive_section{
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+
+.comment_section{
+  border-top: 1px solid rgb(230, 230, 230);
+  margin: 20px 20px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 20px;
+}
+
+.comment_section input{
+  background-color: transparent;
+  border: none;
+}
+
+.comment_section button{
+  margin-right: 10px;
+}
+.line{
+  border-top: 1px solid rgb(230, 230, 230);
+  margin: 0 20px;
+}
+
+section{
+  padding-top: 80px;
 }

@@ -27,7 +27,7 @@
 </head>
 <body>
 
-	<div class="header">
+	<header>
 		<div class="space">
 		</div>
 		<div class="feed">
@@ -48,7 +48,7 @@
 
 			<button type="button" data-toggle="modal" data-target="#myModal" name="Login">Log In</button>
 		</div>
-	</div>
+	</header>
 
 
 	<!-- The Modal -->
@@ -58,7 +58,7 @@
 
 	      <!-- Modal Header -->
 	      <div class="modal-header">
-	        <h4 class="modal-title">Log in</h4>
+	        <h4 class="modal-title">Log In</h4>
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
 	      </div>
 
@@ -71,21 +71,100 @@
 			      <form class="form-group password_section">
 			        <input type="password" id="password" class="form-control" required >
 							<label class="form-control-placeholder" for="password">Password</label>
-							<button type="button" onclick="myFunction()" class="lock_password" name="lock_password"><i class="fas fa-lock" id="lock_icon"></i></button>
+							<button type="button" onclick="hide_and_show_password()" class="lock_password" name="lock_password"><i class="fas fa-lock" id="lock_icon"></i></button>
 			      </form>
-						<button type="button" class="btn modal_body__login_button">Log In</button>
+						<button type="button" class="btn modal_body__login_button">Log in</button>
 
 	      </div>
-
-	      <!-- Modal footer -->
-
 	    </div>
 	  </div>
 	</div>
+	<!-- Photo posts section -->
 
+	<section class="d-flex flex-column" >
+		<div class="d-flex flex-column photo_posts">
+
+			<div class="d-flex flex-row post_header">
+				<div class="d-flex flex-row user">
+					<div class="user_avatar">
+						<img src="./img/user_avatar.png"  alt="User avatar">
+					</div>
+					<div class="d-flex flex-column photo_title">
+						<p>INTEK Institute of applied technology - 248A No Trang Long - Binh Thanh District</p>
+						<div class="d-flex flex-row">
+							<i class="fas fa-map-marker-alt"> Sai Gon, Vietnam</i>
+							<i class="far fa-clock"> 2019</i>
+						</div>
+					</div>
+				</div>
+				<button type="button" name="select_language" class="select_language_button"><i class="fas fa-globe"></i></button>
+			</div>
+
+			<div class="photo">
+				<img src="./img/photo.jpg" alt="Intek Institute">
+			</div>
+
+			<div class="d-flex flex-row interactive_section">
+				<div>
+					<button type="button" name="select_language" class="select_language_button"><i class="fas fa-heart"> 0</i></button>
+					<button type="button" name="select_language" class="select_language_button"><i class="fas fa-comment"> 0</i></button>
+					<button type="button" name="select_language" class="select_language_button"><i class="fas fa-camera"> 0</i></button>
+				</div>
+				<button type="button" name="select_language" class="select_language_button"><i class="fas fa-bookmark"></i></button>
+
+			</div>
+			<div class="line"></div>
+
+			<div class="d-flex flex-row comment_section">
+				<input type="password" class="form-control" placeholder="Write a comment">
+				<button type="button" class="submit_comment" name="submit_comment"><i class="far fa-paper-plane"></i></button>
+			</div>
+
+		</div class="d-flex photo post">
+
+		<div class="d-flex flex-column photo_posts">
+
+			<div class="d-flex flex-row post_header">
+				<div class="d-flex flex-row user">
+					<div class="user_avatar">
+						<img src="./img/user_avatar.png"  alt="User avatar">
+					</div>
+					<div class="d-flex flex-column photo_title">
+						<p>INTEK Institute of applied technology - 248A No Trang Long - Binh Thanh District</p>
+						<div class="d-flex flex-row">
+							<i class="fas fa-map-marker-alt"> Sai Gon, Vietnam</i>
+							<i class="far fa-clock"> 2019</i>
+						</div>
+					</div>
+				</div>
+				<button type="button" name="select_language" class="select_language_button"><i class="fas fa-globe"></i></button>
+			</div>
+
+			<div class="photo">
+				<img src="./img/photo.jpg" alt="Intek Institute">
+			</div>
+
+			<div class="d-flex flex-row interactive_section">
+				<div>
+					<button type="button" name="select_language" class="select_language_button"><i class="fas fa-heart"> 0</i></button>
+					<button type="button" name="select_language" class="select_language_button"><i class="fas fa-comment"> 0</i></button>
+					<button type="button" name="select_language" class="select_language_button"><i class="fas fa-camera"> 0</i></button>
+				</div>
+				<button type="button" name="select_language" class="select_language_button"><i class="fas fa-bookmark"></i></button>
+
+			</div>
+			<div class="line"></div>
+
+			<div class="d-flex flex-row comment_section">
+				<input type="password" class="form-control" placeholder="Write a comment">
+				<button type="button" class="submit_comment" name="submit_comment"><i class="far fa-paper-plane"></i></button>
+			</div>
+
+		</div class="d-flex photo post">
+	</section>
 
 	<script>
-	function myFunction() {
+	function hide_and_show_password() {
 		var lock= document.getElementById("lock_icon");
 	  var button = document.getElementById("password");
 	  if (button.type === "password") {
